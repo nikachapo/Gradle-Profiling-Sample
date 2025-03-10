@@ -15,3 +15,11 @@ Different scenarios.txt in different branches:
 gradle-profiler --benchmark --project-dir ./ --output-dir ./build --scenario-file scenarios.txt --gradle-user-home=./build/gradle
 ```
 Use ./build directory not to add generated classes in root project
+
+Additionally you can add other measurement params:
+```text
+--measure-build-op 
+--measure-config-time 
+--measure-gc 
+--measure-local-build-cache
+```
