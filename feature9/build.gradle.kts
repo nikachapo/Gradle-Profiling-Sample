@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ge.tbcbank.feature9"
+    namespace = "ge.chapo.feature9"
     compileSdk = 34
 
     defaultConfig {

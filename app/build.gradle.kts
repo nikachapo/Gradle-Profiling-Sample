@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "ge.tbcbank.gradleoptimisationsample"
+    namespace = "ge.chapo.gradleoptimisationsample"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "ge.tbcbank.gradleoptimisationsample"
+        applicationId = "ge.chapo.gradleoptimisationsample"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

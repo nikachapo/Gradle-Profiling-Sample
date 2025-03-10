@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a0a82dd7b032ff687847ae2b701faeaa9fdfb142a23f2ea7b4cb53b24aa401a1
-size 1220
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/feature1" />
+            <option value="$PROJECT_DIR$/feature10" />
+            <option value="$PROJECT_DIR$/feature2" />
+            <option value="$PROJECT_DIR$/feature3" />
+            <option value="$PROJECT_DIR$/feature4" />
+            <option value="$PROJECT_DIR$/feature5" />
+            <option value="$PROJECT_DIR$/feature6" />
+            <option value="$PROJECT_DIR$/feature7" />
+            <option value="$PROJECT_DIR$/feature8" />
+            <option value="$PROJECT_DIR$/feature9" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
