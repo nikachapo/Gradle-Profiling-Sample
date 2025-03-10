@@ -1,12 +1,18 @@
 # <root-project>/scenarios.txt
-with_config_caching {
+disable_jetifier {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache"]
-    clear-build-cache-before = SCENARIO
+    git-checkout = {
+        build = "master"
+    }
+    cleanup-tasks = ["clean"]
+    warm-ups = 1
 }
 
-with_caching_and_config_caching {
+enable_jetifier {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache", "--build-cache"]
-    clear-build-cache-before = SCENARIO
+    git-checkout = {
+        build = "scenarios/7-jetifier"
+    }
+    cleanup-tasks = ["clean"]
+    warm-ups = 1
 }
