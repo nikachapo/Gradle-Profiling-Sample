@@ -1,12 +1,11 @@
 # <root-project>/scenarios.txt
-with_config_caching {
+non_parallel {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache"]
     clear-build-cache-before = SCENARIO
 }
 
-with_caching_and_config_caching {
+parallel {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache", "--build-cache"]
+    gradle-args = ["--parallel"]
     clear-build-cache-before = SCENARIO
 }
