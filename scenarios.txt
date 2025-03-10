@@ -1,12 +1,13 @@
 # <root-project>/scenarios.txt
-with_config_caching {
+kapt {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache"]
-    clear-build-cache-before = SCENARIO
+    git-revert = ["b1b1c7c1"]
+    cleanup-tasks = ["clean"]
+    warm-ups = 2
 }
 
-with_caching_and_config_caching {
+ksp {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache", "--build-cache"]
-    clear-build-cache-before = SCENARIO
+    cleanup-tasks = ["clean"]
+    warm-ups = 2
 }
