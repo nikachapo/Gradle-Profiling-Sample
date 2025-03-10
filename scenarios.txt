@@ -1,0 +1,12 @@
+# <root-project>/scenarios.txt
+with_config_caching {
+    tasks = [":app:assembleDebug"]
+    gradle-args = ["--configuration-cache"]
+    clear-build-cache-before = SCENARIO
+}
+
+with_caching_and_config_caching {
+    tasks = [":app:assembleDebug"]
+    gradle-args = ["--configuration-cache", "--build-cache"]
+    clear-build-cache-before = SCENARIO
+}
