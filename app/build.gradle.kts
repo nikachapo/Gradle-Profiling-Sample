@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.kapt)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
 }
 
@@ -81,5 +81,5 @@ dependencies {
     implementation(project(":feature10"))
 
     implementation(libs.room)
-    kapt(libs.room.compiler)
+    ksp(libs.room.compiler)
 }
