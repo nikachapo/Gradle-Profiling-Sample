@@ -1,12 +1,19 @@
 # <root-project>/scenarios.txt
 with_config_caching {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache"]
+    gradle-args = ["--configuration-cache", "--build-cache"]
+    apply-non-abi-change-to = ["feature1/src/main/java/ge/tbcbank/feature1/DummyData.kt",
+                                   "feature2/src/main/java/ge/tbcbank/feature2/DummyData.kt",
+                                   "feature3/src/main/java/ge/tbcbank/feature3/DummyData.kt",
+                                   ]
     clear-build-cache-before = SCENARIO
 }
 
-with_caching_and_config_caching {
+without_caching {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache", "--build-cache"]
+    apply-non-abi-change-to = ["feature1/src/main/java/ge/tbcbank/feature1/DummyData.kt",
+                                       "feature2/src/main/java/ge/tbcbank/feature2/DummyData.kt",
+                                       "feature3/src/main/java/ge/tbcbank/feature3/DummyData.kt",
+                                       ]
     clear-build-cache-before = SCENARIO
 }
