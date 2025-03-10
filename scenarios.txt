@@ -1,12 +1,33 @@
 # <root-project>/scenarios.txt
-with_config_caching {
+modify_functions {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache"]
+    apply-abi-change-to = ["feature1/src/main/java/ge/tbcbank/feature1/DummyData.kt"]
+    apply-non-abi-change-to = ["feature1/src/main/java/ge/tbcbank/feature1/DummyData.kt"]
+    warm-ups = 1
+    iterations = 3
     clear-build-cache-before = SCENARIO
 }
 
-with_caching_and_config_caching {
+modify_strings {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache", "--build-cache"]
+    apply-android-resource-change-to = ["feature1/src/main/res/values/strings.xml"]
+    warm-ups = 1
+    iterations = 3
+    clear-build-cache-before = SCENARIO
+}
+
+modify_layout {
+    tasks = [":app:assembleDebug"]
+    apply-android-layout-change-to = ["feature1/src/main/res/layout/some_layout.xml"]
+    warm-ups = 1
+    iterations = 3
+    clear-build-cache-before = SCENARIO
+}
+
+modify_compose {
+    tasks = [":app:assembleDebug"]
+    apply-kotlin-composable-change-to = ["app/src/main/java/ge/tbcbank/gradleoptimisationsample/MainActivity.kt"]
+    warm-ups = 1
+    iterations = 3
     clear-build-cache-before = SCENARIO
 }
