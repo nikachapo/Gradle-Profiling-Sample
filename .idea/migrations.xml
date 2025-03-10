@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b714eb426b7fda953cba49ad303ea7f2c575215359713eb4c79ae8534bc64306
-size 254
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectMigrations">
+    <option name="MigrateToGradleLocalJavaHome">
+      <set>
+        <option value="$PROJECT_DIR$" />
+      </set>
+    </option>
+  </component>
+</project>
