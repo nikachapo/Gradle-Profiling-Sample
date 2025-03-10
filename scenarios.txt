@@ -1,12 +1,13 @@
 # <root-project>/scenarios.txt
-with_config_caching {
+clean_build_parallelGC_4gb {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache"]
-    clear-build-cache-before = SCENARIO
+    jvm-args = ["-Xmx4g", "-XX:+UseParallelGC"]
+    cleanup-tasks = ["clean"]
 }
 
-with_caching_and_config_caching {
+clean_build_G1GC_2gb_max_workers_4 {
     tasks = [":app:assembleDebug"]
-    gradle-args = ["--configuration-cache", "--build-cache"]
-    clear-build-cache-before = SCENARIO
+    gradle-args = ["--max-workers=4"]
+    jvm-args = ["-XX:+UseG1GC"]
+    cleanup-tasks = ["clean"]
 }
