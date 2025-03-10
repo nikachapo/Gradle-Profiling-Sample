@@ -1,0 +1,17 @@
+# Gradle profiling/benchmarking sample
+
+Different scenarios.txt in different branches:
+  #### scenarios/1-gradle-jvm-args
+  #### scenarios/2-caching
+  #### scenarios/3-changing-files
+  #### scenarios/4-kapt-vs-ksp
+  #### scenarios/5-parallel-execution
+  #### scenarios/6-fork-java-compiler
+  #### scenarios/7-jetifier
+
+  You can run scenarios using https://github.com/gradle/gradle-profiler#profiling-incremental-builds
+
+```text
+gradle-profiler --benchmark --project-dir ./ --output-dir ./build --scenario-file scenarios.txt --gradle-user-home=./build/gradle
+```
+Use ./build directory not to add generated classes in root project
