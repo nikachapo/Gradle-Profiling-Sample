@@ -16,7 +16,7 @@ gradle-profiler --benchmark --project-dir ./ --output-dir ./build --scenario-fil
 ```
 Use ./build directory not to add generated classes in root project
 
-Additionally you can add other measurement params:
+Additionally you can put other measurement params:
 ```text
 --measure-build-op 
 --measure-config-time 
