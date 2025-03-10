@@ -1,5 +1,5 @@
 # <root-project>/scenarios.txt
-with_config_caching {
+with_caching {
     tasks = [":app:assembleDebug"]
     gradle-args = ["--configuration-cache", "--build-cache"]
     apply-non-abi-change-to = ["feature1/src/main/java/ge/chapo/feature1/DummyData.kt",
