@@ -9,7 +9,7 @@ Different scenarios.txt in different branches:
   #### scenarios/6-fork-java-compiler
   #### scenarios/7-jetifier
 
-  You can run scenarios using https://github.com/gradle/gradle-profiler#profiling-incremental-builds
+  You can run scenarios using https://github.com/gradle/gradle-profiler
 
 ```text
 gradle-profiler --benchmark --project-dir ./ --output-dir ./build --scenario-file scenarios.txt --gradle-user-home=./build/gradle
